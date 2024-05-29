@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("https://img.freepik.com/free-vector/elegant-white-wallpaper-with-golden-details_23-2149095007.jpg");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffffdc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 80%;
+        max-width: 800px; /* Adjust as needed */
+      }
+
+      .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .profile-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #eee;
+      }
+
+      .info-column {
+        padding: 50px;
+      }
+
+      .info-column h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px; /* Larger gap between name and details */
+      }
+
+      .info-column p {
+        font-size: 16px;
+        margin-bottom: 10px; /* Gap between each detail */
+      }
+
+      .info-column p strong {
+        display: inline-block;
+        width: 150px; /* Adjust as needed */
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Personal Information</div>
+      <div class="content">
+        <div class="profile-image">
+          <img src="<%= imageSrc %>" alt="Profile Image" />
+        </div>
+        <div class="info-column">
+          <h2><%= information.lastName %> <%= information.firstName %></h2>
+          <p><strong>User Name:</strong> <%= profile.userName %></p>
+          <p><strong>Description:</strong> <%= profile.description %></p>
+          <p><strong>Phone:</strong> <%= information.userPhone %></p>
+          <p><strong>Email:</strong> <%= information.email %></p>
+          <p><strong>Address:</strong> <%= information.streetAddress %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
